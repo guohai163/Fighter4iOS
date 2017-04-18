@@ -15,6 +15,7 @@
 		2FCF636B1EA3245100BB3E17 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FCF63691EA3245100BB3E17 /* LaunchScreen.storyboard */; };
 		2FCF63781EA4955200BB3E17 /* BackgroundNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF63771EA4955200BB3E17 /* BackgroundNode.swift */; };
 		2FCF637A1EA4997F00BB3E17 /* FighterSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF63791EA4997F00BB3E17 /* FighterSpriteNode.swift */; };
+		2FCF637C1EA4A64B00BB3E17 /* MoveConSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF637B1EA4A64B00BB3E17 /* MoveConSpriteNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		2FCF636C1EA3245100BB3E17 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2FCF63771EA4955200BB3E17 /* BackgroundNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BackgroundNode.swift; path = Sprites/BackgroundNode.swift; sourceTree = "<group>"; };
 		2FCF63791EA4997F00BB3E17 /* FighterSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FighterSpriteNode.swift; path = Sprites/FighterSpriteNode.swift; sourceTree = "<group>"; };
+		2FCF637B1EA4A64B00BB3E17 /* MoveConSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MoveConSpriteNode.swift; path = Sprites/MoveConSpriteNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				2FCF63771EA4955200BB3E17 /* BackgroundNode.swift */,
 				2FCF63791EA4997F00BB3E17 /* FighterSpriteNode.swift */,
+				2FCF637B1EA4A64B00BB3E17 /* MoveConSpriteNode.swift */,
 			);
 			name = Sprites;
 			sourceTree = "<group>";
@@ -180,6 +183,7 @@
 			files = (
 				2FCF63611EA3245100BB3E17 /* GameScene.swift in Sources */,
 				2FCF637A1EA4997F00BB3E17 /* FighterSpriteNode.swift in Sources */,
+				2FCF637C1EA4A64B00BB3E17 /* MoveConSpriteNode.swift in Sources */,
 				2FCF63781EA4955200BB3E17 /* BackgroundNode.swift in Sources */,
 				2FCF63631EA3245100BB3E17 /* GameViewController.swift in Sources */,
 				2FCF635B1EA3245100BB3E17 /* AppDelegate.swift in Sources */,
