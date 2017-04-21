@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F5980371EAA4B7200ECC79B /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F5980361EAA4B7200ECC79B /* StoreKit.framework */; };
+		2F5980391EAA520600ECC79B /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5980381EAA520600ECC79B /* IAPHelper.swift */; };
+		2F59803B1EAA53BC00ECC79B /* RageProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F59803A1EAA53BC00ECC79B /* RageProducts.swift */; };
 		2FCF635B1EA3245100BB3E17 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF635A1EA3245100BB3E17 /* AppDelegate.swift */; };
 		2FCF63611EA3245100BB3E17 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF63601EA3245100BB3E17 /* GameScene.swift */; };
 		2FCF63631EA3245100BB3E17 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FCF63621EA3245100BB3E17 /* GameViewController.swift */; };
@@ -19,6 +22,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2F5980361EAA4B7200ECC79B /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		2F5980381EAA520600ECC79B /* IAPHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IAPHelper.swift; path = Support/IAPHelper.swift; sourceTree = "<group>"; };
+		2F59803A1EAA53BC00ECC79B /* RageProducts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RageProducts.swift; path = Support/RageProducts.swift; sourceTree = "<group>"; };
 		2FCF63571EA3245100BB3E17 /* fighter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fighter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2FCF635A1EA3245100BB3E17 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2FCF63601EA3245100BB3E17 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
@@ -37,17 +43,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5980371EAA4B7200ECC79B /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F5980351EAA4B7200ECC79B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F5980361EAA4B7200ECC79B /* StoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2FCF634E1EA3245100BB3E17 = {
 			isa = PBXGroup;
 			children = (
 				2FCF63591EA3245100BB3E17 /* fighter */,
 				2FCF63581EA3245100BB3E17 /* Products */,
+				2F5980351EAA4B7200ECC79B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -100,6 +116,8 @@
 		2FCF63761EA324C000BB3E17 /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				2F59803A1EAA53BC00ECC79B /* RageProducts.swift */,
+				2F5980381EAA520600ECC79B /* IAPHelper.swift */,
 				2FCF636C1EA3245100BB3E17 /* Info.plist */,
 				2FCF63691EA3245100BB3E17 /* LaunchScreen.storyboard */,
 				2FCF63671EA3245100BB3E17 /* Assets.xcassets */,
@@ -142,6 +160,11 @@
 						CreatedOnToolsVersion = 8.3.1;
 						DevelopmentTeam = Q7BNHVRXE5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.InAppPurchase = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -184,6 +207,8 @@
 				2FCF63611EA3245100BB3E17 /* GameScene.swift in Sources */,
 				2FCF637A1EA4997F00BB3E17 /* FighterSpriteNode.swift in Sources */,
 				2FCF637C1EA4A64B00BB3E17 /* MoveConSpriteNode.swift in Sources */,
+				2F59803B1EAA53BC00ECC79B /* RageProducts.swift in Sources */,
+				2F5980391EAA520600ECC79B /* IAPHelper.swift in Sources */,
 				2FCF63781EA4955200BB3E17 /* BackgroundNode.swift in Sources */,
 				2FCF63631EA3245100BB3E17 /* GameViewController.swift in Sources */,
 				2FCF635B1EA3245100BB3E17 /* AppDelegate.swift in Sources */,
@@ -253,7 +278,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -297,7 +322,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -309,12 +334,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q7BNHVRXE5;
 				INFOPLIST_FILE = fighter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.guohai.fighter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -323,12 +351,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q7BNHVRXE5;
 				INFOPLIST_FILE = fighter/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = org.guohai.fighter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -352,6 +383,7 @@
 				2FCF63711EA3245100BB3E17 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

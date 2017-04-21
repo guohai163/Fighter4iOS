@@ -8,6 +8,8 @@
 
 import SpriteKit
 import GameplayKit
+import StoreKit
+
 
 class GameScene: SKScene {
 
@@ -17,7 +19,7 @@ class GameScene: SKScene {
     private var fighterNode : FighterSpriteNode!
     
     private let moveCon = MoveConSpriteNode()
-    
+    var products = [SKProduct]()
     override func sceneDidLoad() {
         
         
@@ -31,6 +33,18 @@ class GameScene: SKScene {
         //加载控制器
         moveCon.setup()
         addChild(moveCon)
+        
+        //内购
+        products = []
+        RageProducts.store.requestProducts{success, products in
+            if success {
+                DLLog(message: "sc")
+                DLLog(message: products?[0].localizedTitle)
+                
+                RageProducts.store.buyProduct((products?[0])!)
+            }
+    
+        }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
